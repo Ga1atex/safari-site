@@ -1,0 +1,350 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #1F1E1E;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 130%;
+}
+
+.header {
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.header__inner {
+  display: flex;
+}
+
+.direction {
+  padding: 100px 0;
+}
+.direction__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+}
+.direction__img {
+  display: block;
+}
+.direction__text {
+  font-size: 16px;
+  border: 1px solid;
+  border-top: none;
+  padding: 12px 19px 14px;
+}
+
+.travel-info {
+  background-image: url(../images/travel-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 30px 0 50px;
+}
+.travel-info__title {
+  margin-bottom: 50px;
+  color: #fff;
+}
+.travel-info__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 54px 67px;
+}
+.travel-info__img {
+  margin-bottom: 15px;
+}
+.travel-info__text {
+  color: #fff;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.popular {
+  padding: 100px 0;
+}
+.popular__title {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.popular__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 32px;
+  padding-bottom: 80px;
+  border: 1px solid #d9d9de;
+}
+.popular__item-link {
+  padding: 16px 24px 19px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 256px;
+  line-height: 130%;
+}
+.popular__item-link:nth-child(3), .popular__item-link:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.popular__item-title {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.popular__item-title--big {
+  font-size: 24px;
+}
+.popular__item-price {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: auto;
+}
+.popular__item-country, .popular__item-time {
+  align-self: flex-start;
+  font-size: 16px;
+}
+
+.map {
+  padding-bottom: 100px;
+}
+.map__title {
+  margin-bottom: 46px;
+}
+
+.about {
+  padding-bottom: 100px;
+}
+.about__inner {
+  display: grid;
+  grid-template-columns: 448px 640px;
+  gap: 32px;
+}
+.about__title {
+  text-align: left;
+  margin-bottom: 25px;
+}
+.about__text {
+  margin-bottom: 34px;
+}
+.about__link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #c4c4c4;
+  text-decoration: underline;
+}
+.about__popup {
+  background-image: url(../images/video-poster.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  padding: 50px 0 105px;
+  background-color: #886239;
+  color: #fff;
+}
+.gallery__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-right: 160px;
+}
+.gallery__link {
+  font-size: 16px;
+  text-decoration: underline;
+  line-height: 19px;
+}
+.gallery__item-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.slick-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -85px;
+  right: 0;
+}
+
+.slick-prev {
+  right: 60px;
+}
+
+.tour {
+  padding: 100px 0;
+}
+.tour__title {
+  margin-bottom: 77px;
+}
+.tour__content {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 46px;
+       column-gap: 46px;
+  border-bottom: 1px solid #d9d9de;
+  margin-bottom: 44px;
+  padding-bottom: 50px;
+}
+.tour__text {
+  margin-bottom: 15px;
+}
+.tour__info {
+  display: flex;
+  justify-content: space-between;
+}
+.tour__info-item {
+  text-align: center;
+  font-size: 58px;
+  line-height: 130%;
+}
+.tour__info-number {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 130%;
+  color: #886239;
+}
+.tour__info-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.booking {
+  background-color: #EAEAEA;
+  padding: 75px 0;
+}
+.booking__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 130%;
+  margin-bottom: 43px;
+}
+.booking__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 832px;
+  margin: 0 auto;
+}
+.booking__input {
+  display: flex;
+  align-items: center;
+  padding: 11px 14px 12px;
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: "Roboto", sans-serif;
+}
+.booking__input::-moz-placeholder, .booking__comments::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: #C4C4C4;
+}
+.booking__input:-ms-input-placeholder, .booking__comments:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: #C4C4C4;
+}
+.booking__input::placeholder, .booking__comments::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  color: #C4C4C4;
+}
+.booking__comments {
+  width: 100%;
+  padding: 14px;
+  height: 112px;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 67px;
+}
+.booking__submit-btn {
+  width: 297px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #886239;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+.booking__label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: underline;
+}
+.booking__checkbox {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 45px;
+}
+.booking__checkbox:checked + .booking__checkbox-style::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #C4C4C4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.booking__checkbox-style {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #C4C4C4;
+  border-radius: 2px;
+  position: absolute;
+  margin-left: -45px;
+}/*# sourceMappingURL=style.css.map */

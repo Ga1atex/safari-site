@@ -24,6 +24,35 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+  color: #fff;
+}
+
+.menu {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 27px 0 24px;
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    // gap: 120px;
+    // justify-content: center;
+  }
+
+  &__item {}
+
+  &__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.phone {
+  color: #fff;
+}
+
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -36,16 +65,99 @@ a {
   line-height: 130%;
 }
 
+.btn {
+  // display: flex;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 19px 65px 20px;
+  background-color: $accent;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
+
 .header {
   background-image: url(../images/header-bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  // height: 100vh;
 
   &__inner {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 15px;
+  }
+
+  &__phone {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+    padding: 9px 0 8px;
+  }
+
+  &__phone-number {
+    min-width: 215px;
+    min-height: 44px;
+    margin-left: 19px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  &__menu {
+    margin-bottom: 49px;
+  }
+
+  &__title {
+    font-family: 'PT Serif', sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 130%;
+    color: $text-color;
+  }
+
+  &__content {
+    margin-top: auto;
+  }
+
+  &__content-text {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: $text-color;
+  }
+
+  &__content-btn {
+    min-width: 250px;
+    min-height: 60px;
+    margin-bottom: 19.5px;
+  }
+
+  &__arrow {
+    text-align: center;
+    margin-bottom: 14.5px;
   }
 }
+
+.logo {
+
+  &__img {}
+}
+
+
 
 .direction {
   padding: 100px 0;
@@ -62,7 +174,7 @@ a {
 
   &__text {
     font-size: 16px;
-    border: 1px solid;
+    border: 1px solid $line-color;
     border-top: none;
     padding: 12px 19px 14px;
   }
@@ -320,14 +432,19 @@ a {
     // gap: 28px;
   }
 
-  &__input {
-    display: flex;
-    align-items: center;
-    padding: 11px 14px 12px;
-    margin-bottom: 28px;
+  &__input,
+  &__comments {
     font-size: 16px;
     line-height: 130%;
     font-family: 'Roboto', sans-serif;
+    border: 1px solid #D9D9DE;
+  }
+
+  &__input {
+    // display: flex;
+    // align-items: center;
+    padding: 11px 14px 12px;
+    margin-bottom: 28px;
   }
 
   &__input::placeholder,
@@ -339,30 +456,17 @@ a {
   }
 
   &__comments {
-
+    border: 1px solid #D9D9DE;
     width: 100%;
     padding: 14px;
     height: 112px;
     resize: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 130%;
     margin-bottom: 67px;
   }
 
   &__submit-btn {
-    width: 297px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding: 19px 65px 20px;
-    background-color: $accent;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    line-height: 21px;
-    color: #fff;
+    min-width: 297px;
+    min-height: 60px;
   }
 
   &__label {
@@ -390,6 +494,8 @@ a {
     width: 16px;
     height: 16px;
     background-color: #C4C4C4;
+    // top: 15%;
+    // left: 15%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -409,4 +515,63 @@ a {
     // line-height: 130%;
     // text-decoration: underline;
   }
+}
+
+.footer {
+  padding: 77px 0 81px;
+  background-color: $text-color;
+
+  &__logo {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  .logo {}
+
+  .logo__img {}
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 130%;
+    max-width: 832px;
+    margin: 0 auto;
+    color: rgba(#fff, .8);
+  }
+
+  &__info {
+    width: 225px;
+  }
+
+  &__box-title {
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: rgba(#fff, 1);
+  }
+
+  &__copy {
+    margin-bottom: 3px;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__address {
+    width: 165px;
+  }
+
+  &__adress-text {}
+
+  &__contacts {
+    width: 210px;
+  }
+
+  &__phone {}
+
+  &__email {
+    display: block;
+  }
+
 }

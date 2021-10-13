@@ -19,6 +19,29 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+  color: #fff;
+}
+
+.menu {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 27px 0 24px;
+}
+.menu__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu__link {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.phone {
+  color: #fff;
+}
+
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -31,6 +54,18 @@ a {
   line-height: 130%;
 }
 
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #886239;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
 .header {
   background-image: url(../images/header-bg.jpg);
   background-repeat: no-repeat;
@@ -38,7 +73,58 @@ a {
   background-size: cover;
 }
 .header__inner {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 15px;
+}
+.header__phone {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 130%;
+  padding: 9px 0 8px;
+}
+.header__phone-number {
+  min-width: 215px;
+  min-height: 44px;
+  margin-left: 19px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+.header__menu {
+  margin-bottom: 49px;
+}
+.header__title {
+  font-family: "PT Serif", sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 130%;
+  color: #1F1E1E;
+}
+.header__content {
+  margin-top: auto;
+}
+.header__content-text {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1F1E1E;
+}
+.header__content-btn {
+  min-width: 250px;
+  min-height: 60px;
+  margin-bottom: 19.5px;
+}
+.header__arrow {
+  text-align: center;
+  margin-bottom: 14.5px;
 }
 
 .direction {
@@ -54,7 +140,7 @@ a {
 }
 .direction__text {
   font-size: 16px;
-  border: 1px solid;
+  border: 1px solid #d9d9de;
   border-top: none;
   padding: 12px 19px 14px;
 }
@@ -263,14 +349,15 @@ a {
   max-width: 832px;
   margin: 0 auto;
 }
-.booking__input {
-  display: flex;
-  align-items: center;
-  padding: 11px 14px 12px;
-  margin-bottom: 28px;
+.booking__input, .booking__comments {
   font-size: 16px;
   line-height: 130%;
   font-family: "Roboto", sans-serif;
+  border: 1px solid #D9D9DE;
+}
+.booking__input {
+  padding: 11px 14px 12px;
+  margin-bottom: 28px;
 }
 .booking__input::-moz-placeholder, .booking__comments::-moz-placeholder {
   font-family: "Roboto", sans-serif;
@@ -291,27 +378,16 @@ a {
   color: #C4C4C4;
 }
 .booking__comments {
+  border: 1px solid #D9D9DE;
   width: 100%;
   padding: 14px;
   height: 112px;
   resize: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 130%;
   margin-bottom: 67px;
 }
 .booking__submit-btn {
-  width: 297px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #886239;
-  border: none;
-  border-radius: 30px;
-  font-size: 18px;
-  line-height: 21px;
-  color: #fff;
+  min-width: 297px;
+  min-height: 60px;
 }
 .booking__label {
   display: flex;
@@ -347,4 +423,44 @@ a {
   border-radius: 2px;
   position: absolute;
   margin-left: -45px;
+}
+.footer {
+  padding: 77px 0 81px;
+  background-color: #1F1E1E;
+}
+.footer__logo {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.footer__box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 130%;
+  max-width: 832px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer__info {
+  width: 225px;
+}
+.footer__box-title {
+  margin-bottom: 7px;
+  font-weight: 500;
+  color: white;
+}
+.footer__copy {
+  margin-bottom: 3px;
+}
+.footer__link {
+  text-decoration: underline;
+}
+.footer__address {
+  width: 165px;
+}
+.footer__contacts {
+  width: 210px;
+}
+.footer__email {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,5 @@
-$accent: #886239;
-$text-color: #1F1E1E;
-$line-color: #d9d9de;
-$grey: #EAEAEA;
+@import "vars";
+// @import url(_vars.scss);
 
 *,
 *::after,
@@ -16,7 +14,9 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
-  color: $text-color;
+  // color: $text-color;
+  color: var(--color-text);
+  min-width: 320px;
 }
 
 a {
@@ -30,23 +30,91 @@ ul {
 }
 
 .menu {
-  border-top: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
-  padding: 27px 0 24px;
+
+  &__btn {
+    display: none;
+    width: 30px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 105px;
+    right: 10px;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 100%;
+      left: 0;
+      position: absolute;
+      display: block;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 2px;
+      transition: all .5s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+
+    &.menu__btn--active::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+
+    &.menu__btn--active::after {
+      transform: rotate(135deg);
+      top: 9px;
+    }
+  }
+
+  &__btn-row {
+    border-radius: 2px;
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    // transition: all .5s;
+
+    .menu__btn--active & {
+      transform: scale(0);
+    }
+  }
 
   &__list {
     display: flex;
     justify-content: space-evenly;
+    padding: 27px 0 24px;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+    // transition: all .5s;
     // gap: 120px;
     // justify-content: center;
+
+    &.menu__list--active {
+      // transform: translateY(0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      // display: flex;
+      // top: 200px;
+    }
   }
 
-  &__item {}
+  &__item {
+    // transition: 0.5s;
+  }
 
   &__link {
     font-size: 16px;
     line-height: 19px;
   }
+
 }
 
 .phone {
@@ -54,8 +122,10 @@ ul {
 }
 
 .container {
-  max-width: 1120px;
+  // max-width: 1120px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .title {
@@ -71,7 +141,8 @@ ul {
   justify-content: center;
   align-items: center;
   // padding: 19px 65px 20px;
-  background-color: $accent;
+  // background-color: $accent;
+  background-color: var(--color-accent);
   border: none;
   border-radius: 30px;
   font-size: 18px;
@@ -111,6 +182,7 @@ ul {
   &__phone-number {
     min-width: 215px;
     min-height: 44px;
+    // padding: 12px 31px 13px;
     margin-left: 19px;
     font-weight: normal;
     font-size: 16px;
@@ -126,18 +198,21 @@ ul {
     font-weight: bold;
     font-size: 90px;
     line-height: 130%;
-    color: $text-color;
+    // color: $text-color;
+    // color: var(--color-text);
+    flex: 1;
   }
 
-  &__content {
-    margin-top: auto;
-  }
+  // &__content {
+  //   margin-top: auto;
+  // }
 
   &__content-text {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 20px;
-    color: $text-color;
+    // color: var(--color-text);
+    // color: $text-color;
   }
 
   &__content-btn {
@@ -170,11 +245,13 @@ ul {
 
   &__img {
     display: block;
+    width: 100%;
   }
 
   &__text {
     font-size: 16px;
-    border: 1px solid $line-color;
+    // border: 1px solid $line-color;
+    border: 1px solid var(--color-line);
     border-top: none;
     padding: 12px 19px 14px;
   }
@@ -214,13 +291,13 @@ ul {
 
   &__title {
     margin-bottom: 40px;
-    text-transform: uppercase;
+    font-weight: bold;
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    // grid-template-rows: repeat(4, 1fr);
     gap: 32px;
     padding-bottom: 80px;
     border: 1px solid #d9d9de;
@@ -228,16 +305,19 @@ ul {
 
   &__item-link {
     padding: 16px 24px 19px;
+    // padding: 6.39% 9.586% 7.59%;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 15px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 256px;
     // min-width: 256px;
     line-height: 130%;
+    // aspect-ratio: 1;
   }
 
   &__item-link:nth-child(3),
@@ -248,7 +328,9 @@ ul {
 
   &__item-title {
     font-weight: 500;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 130%;
 
     &--big {
       font-size: 24px;
@@ -258,13 +340,16 @@ ul {
   &__item-price {
     font-weight: bold;
     font-size: 16px;
-    margin-top: auto;
   }
 
   &__item-country,
   &__item-time {
     align-self: flex-start;
     font-size: 16px;
+  }
+
+  &__item-time {
+    flex: 1;
   }
 }
 
@@ -281,7 +366,8 @@ ul {
 
   &__inner {
     display: grid;
-    grid-template-columns: 448px 640px;
+    // grid-template-columns: 448px 640px;
+    grid-template-columns: 1fr 1.4286fr;
     gap: 32px;
   }
 
@@ -304,7 +390,7 @@ ul {
   &__popup {
     background-image: url(../images/video-poster.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: bottom center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -314,7 +400,8 @@ ul {
 
 .gallery {
   padding: 50px 0 105px;
-  background-color: $accent;
+  // background-color: $accent;
+  background-color: var(--color-accent);
   color: #fff;
 
   &__top {
@@ -345,7 +432,9 @@ ul {
 
   &__item-link {}
 
-  &__item-img {}
+  &__item-img {
+    width: 100%;
+  }
 }
 
 .slick-btn {
@@ -364,15 +453,19 @@ ul {
 
 .tour {
   padding: 100px 0;
+  // padding: 6.945% 0;
 
   &__title {
-    margin-bottom: 77px;
+    // margin-bottom: 77px;
+    margin-bottom: 6.875%;
+    font-weight: bold;
   }
 
   &__content {
     column-count: 2;
     column-gap: 46px;
-    border-bottom: 1px solid $line-color;
+    // border-bottom: 1px solid $line-color;
+    border-bottom: 1px solid var(--color-line);
     margin-bottom: 44px;
     padding-bottom: 50px;
   }
@@ -382,17 +475,19 @@ ul {
   }
 
   &__info {
-    display: flex;
-    justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: repeat(5, 1fr);
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     // gap: 70px;
+    gap: 6.14%;
+    // gap: 12px;
   }
 
   &__info-item {
     text-align: center;
-    font-size: 58px;
-    line-height: 130%;
+    // font-size: 58px;
+    // line-height: 130%;
   }
 
   &__info-number {
@@ -400,7 +495,8 @@ ul {
     font-weight: bold;
     font-size: 58px;
     line-height: 130%;
-    color: $accent;
+    // color: $accent;
+    color: var(--color-accent);
   }
 
   &__info-text {
@@ -411,8 +507,13 @@ ul {
 }
 
 .booking {
-  background-color: $grey;
+  // background-color: $grey;
+  background-color: var(--color-grey);
   padding: 75px 0;
+  // padding: 5.209% 0;
+  // &__inner {
+  //   padding: 6.697% 0;
+  // }
 
   &__title {
     font-weight: bold;
@@ -421,7 +522,6 @@ ul {
     margin-bottom: 43px;
   }
 
-
   &__form {
     display: flex;
     justify-content: space-between;
@@ -429,7 +529,7 @@ ul {
     flex-wrap: wrap;
     max-width: 832px;
     margin: 0 auto;
-    // gap: 28px;
+    gap: 28px;
   }
 
   &__input,
@@ -444,7 +544,7 @@ ul {
     // display: flex;
     // align-items: center;
     padding: 11px 14px 12px;
-    margin-bottom: 28px;
+    // margin-bottom: 28px;
   }
 
   &__input::placeholder,
@@ -479,6 +579,7 @@ ul {
 
   &__checkbox {
     position: absolute;
+    position: relative;
     width: 26px;
     height: 26px;
     width: 1px;
@@ -506,8 +607,11 @@ ul {
     height: 26px;
     border: 2px solid #C4C4C4;
     border-radius: 2px;
-    position: absolute;
-    margin-left: -45px;
+    // position: absolute;
+    position: relative;
+    // margin-left: -45px;
+    margin-right: 19px;
+    flex-shrink: 0;
   }
 
   &__link {
@@ -519,7 +623,8 @@ ul {
 
 .footer {
   padding: 77px 0 81px;
-  background-color: $text-color;
+  background-color: var(--color-text);
+  // background-color: $text-color;
 
   &__logo {
     text-align: center;
@@ -575,3 +680,5 @@ ul {
   }
 
 }
+
+@import "media";

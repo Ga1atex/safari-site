@@ -1,0 +1,279 @@
+@media (max-width: 1200px) {
+  .direction {
+    &__inner {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .travel-info {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+  }
+
+  .popular {
+    &__item-link {
+      min-height: 200px;
+    }
+
+    &__items {
+      gap: 0px;
+    }
+
+  }
+
+  .tour {
+    &__info {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__phone-text {
+      display: none;
+    }
+
+    &__phone-number {
+      margin-left: 0;
+    }
+  }
+
+  .popular {
+    padding: 50px 0;
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      // grid-template-rows: repeat(3, 1fr);
+      padding-bottom: 40px;
+      gap: 10px;
+    }
+
+    &__item-link {
+      min-height: 320px;
+    }
+
+    &__item-title {
+      &--big {
+        font-size: 18px;
+      }
+    }
+
+    &__item-link:nth-child(3),
+    &__item-link:nth-child(6) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  .about {
+    padding-bottom: 50px;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &__popup {
+      min-height: 45vw;
+    }
+  }
+
+  .tour {
+    padding: 50px 0;
+
+    &__content {
+      column-count: 1;
+    }
+  }
+
+  .booking {
+    padding: 50px 0;
+
+    &__input {
+      width: 100%;
+    }
+
+    &__form {
+      flex-direction: column;
+    }
+
+    &__submit-btn {
+      order: 1;
+    }
+
+    &__comments {
+      margin-bottom: 0;
+    }
+
+    &__label {
+      align-self: flex-start;
+    }
+  }
+
+  .footer {
+    padding: 50px 0;
+
+    &__logo {
+      margin-bottom: 40px;
+    }
+
+    &__box {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    &__title {
+      font-size: 50px;
+    }
+
+    &__top {
+      flex-wrap: wrap;
+    }
+  }
+
+  .menu {
+    &__btn {
+      display: inline-block;
+    }
+
+    &__list {
+      // display: none;
+      transform: translateY(100vh);
+      // top: -100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      // background-color: $accent;
+      background-color: var(--color-accent);
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      // transform: translate3d(0, 300px, 0);
+    }
+
+    &__item {
+      // padding: 10px 0;
+    }
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .direction {
+    padding: 50px 0;
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    &__text {
+      padding: 6px 9px 7px;
+    }
+  }
+
+  .travel-info {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  .popular {
+    &__item-link {
+      // aspect-ratio: 16 / 9;
+      min-height: 256px;
+    }
+  }
+
+  .map {
+    padding-bottom: 50px;
+
+    &__iframe {
+      height: 70vw;
+    }
+  }
+
+  .gallery {
+    padding-bottom: 50px;
+
+    &__top {
+      flex-wrap: wrap;
+    }
+
+    &__item-inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4vw;
+    }
+  }
+
+  .tour {
+    &__content {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__info {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px;
+    }
+
+    &__info-text {
+      white-space: pre-line;
+    }
+
+    &__info-number {
+      font-size: 48px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .direction {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .travel-info {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+    }
+  }
+
+  .popular {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .tour {
+    &__info {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__info-text {
+      white-space: normal;
+    }
+  }
+}

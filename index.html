@@ -26,12 +26,15 @@
             <img class="logo__img" src="images/logo.svg" alt="">
           </a>
           <div class="header__phone phone">
-            Заказ туров и бронирование:
+            <span class="header__phone-text">Заказ туров и бронирование:</span>
             <a class="header__phone-number btn" href="tel:80508543543">тел. 8-050-8-543-543</a>
           </div>
 
         </div>
         <nav class="menu header__menu">
+          <button class="menu__btn">
+            <span class="menu__btn-row"></span>
+          </button>
           <ul class="menu__list">
             <li class="menu__item"><a class="menu__link" href="">Бронирование</a></li>
             <li class="menu__item"><a class="menu__link" href="">Экскурсии</a></li>
@@ -110,9 +113,6 @@
       </div>
     </section>
 
-
-
-
     <section class="travel-info">
       <div class="container">
         <h2 class="travel-info__title title">Основные направления</h2>
@@ -150,7 +150,7 @@
     </section>
     <section class="popular">
       <div class="container">
-        <h2 class="popular__title title"></h2>
+        <h2 class="popular__title title">Популярные предложения</h2>
         <div class="popular__items">
           <a href="#" class="popular__item-link" style="background-image: url(images/popular-1.jpg)">
             <h4 class="popular__item-title">ПУТЕШЕСТВИЕ ПО НАМИБИИ</h4>
@@ -160,9 +160,9 @@
             <h4 class="popular__item-title">КЛАССИКА КЕНИИ</h4>
             <p class="popular__item-price">от 3500 $</p>
           </a>
-          <a href="#" class="popular__item-link popular__item-title--big"
-            style="background-image: url(images/popular-3.jpg)">
-            <h4 class="popular__item-title">САМЫЕ ПОПУЛЯРНЫЕ САФАРИ ПАРКИ И ЗАПОВЕДНИКИ ТАНЗАНИИ</h4>
+          <a href="#" class="popular__item-link" style="background-image: url(images/popular-3.jpg)">
+            <h4 class="popular__item-title popular__item-title--big">САМЫЕ ПОПУЛЯРНЫЕ САФАРИ ПАРКИ И ЗАПОВЕДНИКИ
+              ТАНЗАНИИ</h4>
             <p class="popular__item-country">Танзания</p>
             <p class="popular__item-time">7 дней / 6 ночей</p>
             <p class="popular__item-price">от 1700 $</p>
@@ -205,7 +205,7 @@
         <h2 class="map__title title">Карта Африки</h2>
         <iframe class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18392108.2253138!2d31.350702317022638!3d-21.188717899054637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sru!4v1634056011299!5m2!1sru!2sru"
-          width="1120" height="610" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          width="100%" height="610" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
     <section class="about">
@@ -342,7 +342,6 @@
               <input class="booking__checkbox" type="checkbox">
               <span class="booking__checkbox-style"></span>
               Согласие на обработку персональных данных
-              <!-- <a class="booking__link" href="#">Согласие на обработку персональных данных</a> -->
             </label>
           </form>
         </div>
